@@ -81,17 +81,39 @@
 	        <div>Messages postés&nbsp;:</div><br/>
 		<span><b>Bienvenu(e) / Welcome</b></span><br/>
 		<span>N'hésitez pas à me laisser un message / Don't hesitate, let a message</span><br/><hr/>
+		<p>
+<?php 
+	$file = "log.txt";
+              
 
-<?php $myfile = fopen("blahblah.txt", "a") or die("Unable to open file!");
-                        fwrite($myfile, $_POST["titre"]);
-                        fwrite($myfile, $_POST["message"]);
-                        fclose($myfile);
-                        $myfile = fopen("blahblah.txt", "r") or die("Unable to open file!");
-                        echo fgets($myfile);
-                        fclose($myfile);
+
+              if (isset($_POST['titre']) && trim($_POST['titre']) !== "") {
+
+              	$titre = $_POST["titre"];
+
+              	if (isset($_POST['message']) && trim($_POST['message']) !== "") {
+              		$message = $_POST["message"];
+	              	$json["last"] = array("titre"=>$titre,"message" => $message);
+			
+		}
+		else{
+			$json["last"] = array("titre"=>$titre,"message" => " ");
+		}
+		file_put_contents($file, json_encode($json));
+
+              }
+
+
+	$json = json_decode(file_get_contents($file), true);
+
+	if (isset($json["last"])) {
+		echo "<h2> Dernier message : </h2>";
+		echo " <h3>Titre : ". $json["last"]["titre"] . "</h4>";
+		echo " <p> <b>Message : </b>" . $json["last"]["message"] . "</p>";
+	}
+
                         
 ?>
-
         </div>
         </div>
         </div>
