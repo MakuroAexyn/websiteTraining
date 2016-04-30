@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE HTML>
 <html>
 
@@ -26,8 +25,8 @@
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.php">Home</a></li>
           <li><a href="categorie.php">Catégories</a></li>
-          <li class="selected"><a href="membres.php">Membres</a></li>
-          <li><a href="contacts.php">Contact</a></li>
+          <li><a href="membres.php">Membres</a></li>
+          <li  class="selected"><a href="contacts.php">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -38,7 +37,7 @@
           <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
-			<?php include('./includes/repositories.inc.php'); ?>
+            <?php include('./includes/repositories.inc.php'); ?>
 			</div>
           <div class="sidebar_base"></div>
         </div>
@@ -52,28 +51,51 @@
         <div class="sidebar">
           <div class="sidebar_top"></div>
 		  <div class="sidebar_item">
-
             <?php include('./includes/news.inc.php'); ?>
           </div>
           <div class="sidebar_base"></div>
         </div>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>Les membres de l'association ISI </h1>
-  
-			
-			<ul>
-			  <li><h4>John </h4></li>
-			  <li><h4>Jeanne </h4></li>
-			  <li><h4>Pablo </h4></li>
-			</ul>
-			
-			
-		<p>
-		</div>
-    </div>
+        <h1>Contacts</h1>
+	<hr/>
+	
+	<div>
+	    <span style="text-align: right; float:right;">Statut / Status : <i class="invite">invite</i></span>
+	</div><br/>
+
+	        <form action="" method="POST" />
+	        <div>
+	            Titre / Title&nbsp;:<br/>
+	            <input type="text" name="titre" value="" />
+	        </div><br/>
+	        <div>
+	            Message / Content&nbsp;:<br/>
+	            <textarea name="message" rows="3" cols="50"></textarea>
+	        </div>
+	        <div>
+	            <input type="submit" value="envoyer / send" />
+	        </div>
+        </form><br/><br/>
+        <div>
+	        <div>Messages postés&nbsp;:</div><br/>
+		<span><b>Bienvenu(e) / Welcome</b></span><br/>
+		<span>N'hésitez pas à me laisser un message / Don't hesitate, let a message</span><br/><hr/>
+
+<?php $myfile = fopen("blahblah.txt", "a") or die("Unable to open file!");
+                        fwrite($myfile, $_POST["titre"]);
+                        fwrite($myfile, $_POST["message"]);
+                        fclose($myfile);
+                        $myfile = fopen("blahblah.txt", "r") or die("Unable to open file!");
+                        echo fgets($myfile);
+                        fclose($myfile);
+                        
+?>
+
+        </div>
+        </div>
+        </div>
     <?php include('./includes/footer.inc.php'); ?>
-  </div>
+</div>
 </body>
 </html>
