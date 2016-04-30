@@ -57,36 +57,33 @@
         </div>
       </div>
       <div id="content">
-        <h1>Contacts</h1>
+        <h1>Contact</h1>
 	<hr/>
 	
 	<div>
-	    <span style="text-align: right; float:right;">Statut / Status : <i class="invite">invite</i></span>
+	    <span style="text-align: right; float:right;">Statut : <i class="invite">invite</i></span>
 	</div><br/>
 
 	        <form action="" method="POST" />
 	        <div>
-	            Titre / Title&nbsp;:<br/>
+	            Titre&nbsp;:<br/>
 	            <input type="text" name="titre" value="" />
 	        </div><br/>
 	        <div>
-	            Message / Content&nbsp;:<br/>
+	            Message&nbsp;:<br/>
 	            <textarea name="message" rows="3" cols="50"></textarea>
 	        </div>
 	        <div>
-	            <input type="submit" value="envoyer / send" />
+	            <input type="submit" value="envoyer" />
 	        </div>
         </form><br/><br/>
         <div>
 	        <div>Messages postés&nbsp;:</div><br/>
-		<span><b>Bienvenu(e) / Welcome</b></span><br/>
-		<span>N'hésitez pas à me laisser un message / Don't hesitate, let a message</span><br/><hr/>
-		<p>
+		<span><b>Bienvenu(e)</b></span><br/>
+		<span>N'hésitez pas à me laisser un message</span><br/><hr/><br/>
 <?php 
 	$file = "log.txt";
               
-
-
               if (isset($_POST['titre']) && trim($_POST['titre']) !== "") {
 
               	$titre = $_POST["titre"];
@@ -107,9 +104,10 @@
 	$json = json_decode(file_get_contents($file), true);
 
 	if (isset($json["last"])) {
-		echo "<h2> Dernier message : </h2>";
-		echo " <h3>Titre : ". $json["last"]["titre"] . "</h4>";
+		echo " <div>";
+		echo " <h3><b>Titre : </b>". $json["last"]["titre"] . "</h5>";
 		echo " <p> <b>Message : </b>" . $json["last"]["message"] . "</p>";
+		echo " </div>";
 	}
 
                         

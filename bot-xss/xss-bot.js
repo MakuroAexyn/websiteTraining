@@ -1,6 +1,6 @@
 var page = require('webpage').create();
-var host = "127.0.0.1/websiteTraining";
-var url = "https://"+host+"/contacts.php";
+var host = "127.0.0.1";
+var url = "https://"+host+"/websiteTraining/contacts.php";
 var timeout = 2000;
  
 phantom.addCookie({
