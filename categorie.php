@@ -26,7 +26,7 @@
           <li ><a href="index.php">Home</a></li>
           <li class="selected"><a href="categorie.php">Catégories</a></li>
           <li><a href="membres.php">Membres</a></li>
-		  <li><a href="contacts.php">Contact</a></li>
+	   <li><a href="contacts.php">Contact</a></li>
         </ul>
       </div>
     </div>
