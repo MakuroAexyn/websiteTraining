@@ -1,6 +1,6 @@
 
 
-<?php include("/wamp/www/websiteTraining/includes/connexion_db.inc.php"); ?>
+<?php include("/var/www/websiteTraining/includes/connexion_db.inc.php"); ?>
 
 <!DOCTYPE HTML>
 <html>

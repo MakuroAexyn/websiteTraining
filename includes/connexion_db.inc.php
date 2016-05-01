@@ -3,7 +3,7 @@
 	$serveur = "127.0.0.1";
 	$base = "trainingisi";
 	$user = "root";
-	$pass = "";
+	$pass = "ISI_sql_vulnerable";
 
 	$mysqli = new mysqli($serveur, $user, $pass, $base);
 
