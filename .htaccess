@@ -1,0 +1,18 @@
+options -indexes
+
+
+<Files admin.php>
+
+AuthUserFile /var/www/websiteTraining/.htpasswd
+AuthName "Veuillez vous identifier"
+
+AuthType Basic
+ 
+<Limit GET POST>
+
+	require valid-user
+
+</Limit>
+ 
+
+</Files>

@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE HTML>
 <html>
 
@@ -16,18 +17,18 @@
     <div id="header">
       <div id="logo">
         <div id="logo_text">
-		
+          <!-- class="logo_colour", allows you to change the colour of the text -->
           <h1><a href="index.php">Training<span class="logo_colour">ISI</span></a></h1>
         </div>
       </div>
       <div id="menubar">
         <ul id="menu">
-		
-          <li ><a href="index.php">Home</a></li>
-          <li class="selected"><a href="categorie.php">Catégories</a></li>
-          <li><a href="membres.php">Membres</a></li>
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.php">Home</a></li>
+          <li><a href="categorie.php">Catégories</a></li>
+          <li class="selected"><a href="membres.php">Membres</a></li>
           <li><a href="upload.php">Upload</a></li>
-	   <li><a href="contacts.php">Contact</a></li>
+          <li><a href="contacts.php">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -38,9 +39,8 @@
           <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
-            <?php include('./includes/repositories.inc.php'); ?>
-           
-          </div>
+			<?php include('./includes/repositories.inc.php'); ?>
+			</div>
           <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
@@ -53,46 +53,23 @@
         <div class="sidebar">
           <div class="sidebar_top"></div>
 		  <div class="sidebar_item">
+
             <?php include('./includes/news.inc.php'); ?>
           </div>
           <div class="sidebar_base"></div>
         </div>
       </div>
-	  
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Categories</h1>
-        <p>
-			Voici ce que nous vendons à nos clients pour qu'ils puissent collecter des données:
-			<ul>
-				<li><a href="?page=pages/script_donnees.php">Liste de scripts</a></li>
-				<li><a href="?page=pages/liste_clients.php"> Liste des clients </a></li>
-			</ul>
+        <h1>Espace Administrateur </h1>
+  
 			
-			<?php
-				
-						if(isset($_GET['page']) && !empty($_GET['page']))
-						{
-							$page=$_GET['page'];
-							
-							if($page[0]=='p' && $page[1]=='a' && $page[2]=='g' && $page[3]=='e' && $page[4]=='s')
-									include($page);	
-							else
-								echo "Tentative de hack !";
-
-													
-						}
-			?>
-
-
-			</p>
-
+		<p> Bravo !  ISILAB{AuThenTICAtion_BasiC_gET_PoST}</p>
+			
+			
 		</div>
     </div>
     <?php include('./includes/footer.inc.php'); ?>
   </div>
 </body>
 </html>
-
-
-
