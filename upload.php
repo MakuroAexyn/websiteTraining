@@ -1,4 +1,4 @@
-
+<?php $FLAGS="ISILAB{UpL0@d_F1le_P4g€}"; ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -76,15 +76,19 @@
                 //Here we set the target path that will save the file in to.
                 $target_path = $target_path.basename($_FILES['uploadedfile']['name']);
                 // here wll move the desired file from the tmp directory to the target path
+                if($_FILES['uploadedfile']['type'] != "application/zip" && $_FILES['uploadedfile']['type'] != "application/rar") {
+                    echo "<div class='error'><strong>Erreur </strong>nous acceptons que les extensions suivantes : .zip .rar.</div>";
+                    exit;
+                }
                 if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'],$target_path)){
-                  echo "<div class='success'><strong>Succès </strong>Le fichier " . basename($_FILES['uploadedfile']['name']) . " a été upload ! </div>";
+                    echo "<div class='success'><strong>Succès </strong>Le fichier " . basename($_FILES['uploadedfile']['name']) . " a été upload ! </div>";
                 }elseif (!isset($_FILES['uploadedfile']['name'])) {
-                  echo "<div class='info'><strong>Info </strong>extensions autorisées : .zip .rar</div>";
+                    echo "<div class='info'><strong>Info </strong>extensions autorisées : .zip .rar</div>";
                 }
                 else {
-                  echo "<div class='error'><strong>Erreur </strong>le fichier n'a pas été upload.</div>";
+                    echo "<div class='error'><strong>Erreur </strong>le fichier n'a pas été upload.</div>";
                 }
-          ?>
+        ?>
     </div>
     </div>
     <?php include('./includes/footer.inc.php'); ?>
