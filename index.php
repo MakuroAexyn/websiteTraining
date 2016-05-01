@@ -1,8 +1,9 @@
-<?php $FLAGS="ISILAB{LFI_Is_GrEat_gUy}"; ?>
+
+
 
 <!DOCTYPE HTML>
 <html>
-
+<!--  $FLAGS="ISILAB{LFI_Is_GrEat_gUy}";  I should remove it... -->
 <head>
   <title>Training ISI</title>
   <meta name="description" content="website description" />
