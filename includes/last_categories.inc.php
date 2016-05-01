@@ -1,4 +1,4 @@
-<h3>Latest Catégories</h3>
+<h3>Catégories récentes</h3>
 	<ul>
-	  <li><p>Ajouter un truc ... </p></li>
+	  <li><p><a href='categorie.php?page=pages/script_donnees.php'>Scripts</a> </p></li>
 	</ul>
