@@ -1,7 +1,7 @@
 <?php
 
 	$serveur = "127.0.0.1";
-	$base = "training";
+	$base = "trainingisi";
 	$user = "root";
 	$pass = "";
 
