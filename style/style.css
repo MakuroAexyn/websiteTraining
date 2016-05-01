@@ -276,7 +276,9 @@ ul#menu li a:hover
   border: 1px solid #E5E5DB; 
   background: #FFF; 
   color: #47433F;}
-  
+
+
+
 .form_settings .submit
 { font: 100% arial; 
   border: 0; 
@@ -308,7 +310,40 @@ ul#menu li a:hover
   border-top: 1px solid #D9D5CF;
   border-bottom: 1px solid #FFF;
   margin: 0 0 20px 0;}
-  
+
+    .info, .success, .warning, .error, .validation {
+      border: 1px solid;
+      margin: 10px 0px;
+      padding: 15px 10px 15px 50px;
+      background-repeat: no-repeat;
+      background-position: 10px center;
+    }
+    .info {
+      color: #00529B;
+      background-color: #BDE5F8;
+
+    }
+    .success {
+      color: #4F8A10;
+      background-color: #DFF2BF;
+
+    }
+    .warning {
+      color: #9F6000;
+      background-color: #FEEFB3;
+
+    }
+    .error{
+      color: #D8000C;
+      background-color: #FFBABA;
+
+    }
+    .validation{
+      color: #D63301;
+      background-color: #FFCCBA;
+
+    }
+
 table
 { margin: 10px 0 30px 0;}
 
