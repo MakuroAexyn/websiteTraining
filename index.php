@@ -1,4 +1,4 @@
-
+<?php $FLAGS="ISILAB{LFI_Is_GrEat_gUy}"; ?>
 
 <!DOCTYPE HTML>
 <html>
