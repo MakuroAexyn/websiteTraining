@@ -23,7 +23,6 @@
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.php">Home</a></li>
           <li><a href="categorie.php">Catégories</a></li>
-          <li><a href="membres.php">Membres</a></li>
           <li><a href="upload.php">Upload</a></li>
           <li  class="selected"><a href="contacts.php">Contact</a></li>
         </ul>
