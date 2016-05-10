@@ -68,6 +68,14 @@
 			Nous travaillons aussi avec des organisations gouvernementales.<br>
 			
 			<h4><strong>N'essayez pas de nous attaquer car nous savons qui vous êtes.</strong></h4>
+
+        <br />
+        <h3><strong>Information importante :</strong></h3>
+        <p style="color:green">
+          Récemment, nous avons été victime d'une série d'attaques perpétrés par de vilains hackers de l'INSA Centre Val-de-loire,
+          qui a complétement nui à la sécurité de notre site web et aux données que nous collectons,
+          ce pourquoi des mesures de sécurité ont été mis en place pour lutter contre ce genre d'attaques.
+        </p>
 			
 		</p>
 		
