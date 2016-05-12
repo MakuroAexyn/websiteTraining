@@ -75,10 +75,19 @@
                 //Here we set the target path that will save the file in to.
                 $target_path = $target_path.basename($_FILES['uploadedfile']['name']);
                 // here wll move the desired file from the tmp directory to the target path
-                if($_FILES['uploadedfile']['type'] != "application/zip" && $_FILES['uploadedfile']['type'] != "application/rar") {
-                    echo "<div class='error'><strong>Erreur </strong>nous acceptons que les extensions suivantes : .zip .rar.</div>";
+                $ext = pathinfo($target_path, PATHINFO_EXTENSION);
+
+                if($_FILES['uploadedfile']['type'] != "image/jpg" && $_FILES['uploadedfile']['type'] != "image/png") {
+                    echo "<div class='error'><strong>Erreur </strong>nous acceptons que les extensions suivantes : .jpg ou .png.</div>";
                     exit;
                 }
+                else{
+                    if($ext != "png" and $ext != "jpg"){
+                        echo "<div class='error'><strong>Erreur </strong>nous acceptons que les extensions suivantes : .jpg ou .png.</div>";
+                        exit;
+                    }
+                }
+
                 if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'],$target_path)){
                     echo "<div class='success'><strong>Succès </strong>Le fichier " . basename($_FILES['uploadedfile']['name']) . " a été upload ! </div>";
                 }elseif (!isset($_FILES['uploadedfile']['name'])) {
