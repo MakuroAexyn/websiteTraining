@@ -56,14 +56,13 @@
         </div>
       </div>
       <div id="content">
-        <!-- insert the page content here -->
-        <h1>Espace Administrateur </h1>
-
-
-		<p> Bravo !  ISILAB{AuThenTICAtion_BasiC_gET_PoST}</p>
-
-
-		</div>
+        <h1>Espace Contenu </h1>
+        <p>Rien à afficher dans cette section.</p>
+		  </div>
+		  <?php
+        if(DOMDocument::getElementById ("contentAdmin")
+          echo "<h1>Espace Administrateur </h1><p> Bravo !  ISILAB{AuThenTICAtionHard}</p>";
+      ?>
     </div>
     <?php include('./includes/footer.inc.php'); ?>
   </div>

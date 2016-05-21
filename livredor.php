@@ -24,8 +24,8 @@
           <li><a href="index.php">Home</a></li>
           <li><a href="categorie.php">Catégories</a></li>
           <li><a href="upload.php">Upload</a></li>
-          <li  class="selected"><a href="contacts.php">Contact</a></li>
-          <li><a href="livredor.php">Livre d'Or</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li  class="selected"><a href="livredor.php">Livre d'Or</a></li>
         </ul>
       </div>
     </div>
