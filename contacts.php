@@ -84,10 +84,13 @@
               
               if (isset($_POST['titre']) && trim($_POST['titre']) !== "") {
 
-              	$titre = $_POST["titre"];
+              	$titre = htmlspecialchars($_POST["titre"]);
 
               	if (isset($_POST['message']) && trim($_POST['message']) !== "") {
               		$message = $_POST["message"];
+		        $message = preg_replace( '/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t(.*)>/i', "Bonjour, le nom de mon père c'est le nom du papa de la science Eddy Malou", $message );
+		        $message = preg_replace( '/<(.*)i(.*)m(.*)g/i', "Bonjour, le nom de mon père c'est le nom du papa de la science Eddy Malou", $message );
+		        //$message = mysql_real_escape_string( $message );
 	              	$json["last"] = array("titre"=>$titre,"message" => $message);
 			
 		}
