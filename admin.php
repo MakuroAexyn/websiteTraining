@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE HTML>
 <html>
 
@@ -61,11 +58,11 @@
       <div id="content">
         <!-- insert the page content here -->
         <h1>Espace Administrateur </h1>
-  
-			
+
+
 		<p> Bravo !  ISILAB{AuThenTICAtion_BasiC_gET_PoST}</p>
-			
-			
+
+
 		</div>
     </div>
     <?php include('./includes/footer.inc.php'); ?>
