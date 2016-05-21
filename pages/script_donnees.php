@@ -14,7 +14,7 @@
 
 					if(isset($_GET['id']) && !empty($_GET['id'])){
 						$id=$_GET['id'];
-						$resultat_id = $mysqli->query("SELECT nom,efficacite,annee from produits where id='$id'");
+						$resultat_id = $mysqli->query("SELECT * from produits where id='$id'");
 
 						echo "<h3>Details de l'element avec l'Id: $id</h4>";
 
@@ -23,16 +23,18 @@
 
               <h4>Une Erreur est survenue</h4>';
             } else {
-              while($donnee=$resultat_id->fetch_assoc())
-              {
-                  echo '
-
-                  <h4>'.$donnee['nom'].'</h4>
-                        <center><table><tr>
-                  <td>Efficacité:'.htmlspecialchars($donnee['efficacite']).':</td>
-                                <td>Date: '.htmlspecialchars($donnee['annee']).'</td>
-                    </tr></table></center>';
+              while($donnee=$resultat_id->fetch_assoc()){
+                  echo '<center><table><tr><tr>';
+                  foreach ($donnee as $key) {
+                    echo '<td>'.array_search($key, $donnee).'</td>';
+                  }
+                  echo '</tr><tr>';
+                  foreach ($donnee as $key) {
+                    echo '<td>'.$key.'</td>';
+                  }
+                  echo '</tr></table></center>';
                 }
+
             }
 
 					}
