@@ -27,7 +27,7 @@
           <li><a href="categorie.php">Catégories</a></li>
           <li class="selected"><a href="upload.php">Upload</a></li>
 	   <li><a href="contacts.php">Contact</a></li>
-	   <li><a href="livredor.php">Livre d'Or</a></li>
+	   <li><a href="news.php">News</a></li>
         </ul>
       </div>
     </div>

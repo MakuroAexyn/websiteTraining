@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <html>
 
@@ -8,9 +10,8 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
-
 <body>
-  <div id="main">
+ <div id="main">
     <div id="header">
       <div id="logo">
         <div id="logo_text">
@@ -22,9 +23,10 @@
         <ul id="menu">
           <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
           <li><a href="index.php">Home</a></li>
-          <li><a href="categorie.php">Catégories</a></li>
+ <li><a href="categorie.php">Catégories</a></li>
           <li><a href="upload.php">Upload</a></li>
           <li><a href="contacts.php">Contact</a></li>
+          <li  class="selected"><a href="news.php">News</a></li>
         </ul>
       </div>
     </div>
@@ -35,36 +37,55 @@
           <div class="sidebar_top"></div>
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
-			<?php include('./includes/repositories.inc.php'); ?>
-			</div>
+            <?php include('./includes/repositories.inc.php'); ?>
+                        </div>
           <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
           <div class="sidebar_top"></div>
-          <div class="sidebar_item">
+  <div class="sidebar_item">
             <?php include('./includes/last_categories.inc.php'); ?>
           </div>
           <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
           <div class="sidebar_top"></div>
-		  <div class="sidebar_item">
-
+                  <div class="sidebar_item">
             <?php include('./includes/news.inc.php'); ?>
           </div>
           <div class="sidebar_base"></div>
         </div>
       </div>
       <div id="content">
-        <h1>Espace Contenu </h1>
-        <p>Rien à afficher dans cette section.</p>
-		  </div>
-		  <?php
-        if(DOMDocument::getElementById ("contentAdmin")
-          echo "<h1>Espace Administrateur </h1><p> Bravo !  ISILAB{AuThenTICAtionHard}</p>";
-      ?>
-    </div>
-    <?php include('./includes/footer.inc.php'); ?>
-  </div>
+        <h1>News</h1>
+        <hr/>
+	<br/>
+
+
+
+<h3>
+
+    Language : 
+    <a href="?lang=fr" style="text-decoration:underline">Français</a>
+    &nbsp;|&nbsp;
+    <a href="?lang=en" style="text-decoration:underline">English</a>  
+    &nbsp;|&nbsp;	
+    <a href="?lang=ru" style="text-decoration:underline">русский</a>
+
+<?php
+$language="fr";
+$language = $_GET["lang"];
+include $language."_lang.php";
+/*Hello my friend, privjet tovarich.
+Your flag is ISILAB{DA_1N73RN4710N4L_RfI}*/
+
+?>
+
+</h3>
+
+<p>Une version multilingue est en préparation!</p>
+<p>A multilingual version will soon be released!</p>
+<p>Я люблю медведей и водку.</p>
+
 </body>
 </html>

@@ -1,1 +1,1 @@
-{"last":{"titre":"dsdssds","message":"<s>XSS<\/s>"}}
+{"last":{"titre":"dfs","message":"<body onload=alert(document.cookie);>xD<\/body>"}}
